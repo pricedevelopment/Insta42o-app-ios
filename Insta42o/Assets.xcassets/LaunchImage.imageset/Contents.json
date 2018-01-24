@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "LaunchImage.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iPhone_Settings_iOS5-9_29pt@2x.png",
       "scale" : "2x"
     },
     {
