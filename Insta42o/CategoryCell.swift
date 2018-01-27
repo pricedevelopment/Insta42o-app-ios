@@ -38,7 +38,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Best New Apps"
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textColor = UIColor.red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -57,7 +57,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     let dividerLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.4, alpha: 0.4)
+        view.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -98,7 +98,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: frame.height - 32)
+        return CGSize(width: 105, height: frame.height - 32)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -131,7 +131,7 @@ class AppCell: UICollectionViewCell {
                     priceLabel.frame = CGRect(x: 0, y: frame.width + 40, width: frame.width, height: 20)
                 }
                 
-                nameLabel.frame = CGRect(x: 0, y: frame.width + 5, width: frame.width, height: 38)
+                nameLabel.frame = CGRect(x: 0, y: frame.width + 5, width: frame.width, height: 40)
                 nameLabel.sizeToFit()
                 
             }
@@ -187,7 +187,7 @@ class AppCell: UICollectionViewCell {
     let priceLabel: UILabel = {
         let label = UILabel()
         label.text = "$3.99"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor.red
         return label
     }()
@@ -199,7 +199,7 @@ class AppCell: UICollectionViewCell {
         addSubview(priceLabel)
         
         imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
-        nameLabel.frame = CGRect(x: 0, y: frame.width + 2, width: frame.width, height: 38)
+        nameLabel.frame = CGRect(x: 0, y: frame.width + 2, width: frame.width, height: 40)
         categoryLabel.frame = CGRect(x: 0, y: frame.width + 38, width: frame.width, height: 20)
         priceLabel.frame = CGRect(x: 0, y: frame.width + 56, width: frame.width, height: 20)
     }

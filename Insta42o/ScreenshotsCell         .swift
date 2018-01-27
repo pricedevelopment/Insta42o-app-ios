@@ -68,7 +68,7 @@ class ScreenshotsCell: BaseCell, UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 240, height: frame.height - 28)
+        return CGSize(width: 220, height: frame.height - 28)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -80,7 +80,7 @@ class ScreenshotsCell: BaseCell, UICollectionViewDataSource, UICollectionViewDel
         let imageView: UIImageView = {
             let iv = UIImageView()
             iv.contentMode = .scaleAspectFill
-            iv.backgroundColor = UIColor.green
+            iv.backgroundColor = UIColor.white
             return iv
         }()
         

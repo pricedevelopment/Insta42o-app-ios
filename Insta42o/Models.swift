@@ -87,7 +87,7 @@ class AppCategory: NSObject {
     static func sampleAppCategories() -> [AppCategory] {
         
         let bestNewAppsCategory = AppCategory()
-        bestNewAppsCategory.name = "Best New Apps"
+        bestNewAppsCategory.name = "Best New Strains"
         
         var apps = [App]()
         
