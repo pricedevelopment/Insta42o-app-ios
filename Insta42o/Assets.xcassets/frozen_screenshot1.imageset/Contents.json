@@ -2,7 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "frozen_screenshot1.jpeg",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
       "scale" : "1x"
     },
     {
