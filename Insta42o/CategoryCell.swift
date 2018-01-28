@@ -49,7 +49,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.lightGray
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
@@ -63,7 +63,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }()
     
     func setupViews() {
-        backgroundColor = UIColor.lightGray
+        backgroundColor = UIColor.black
         
         addSubview(appsCollectionView)
         addSubview(dividerLineView)
@@ -121,7 +121,7 @@ class AppCell: UICollectionViewCell {
             if let name = app?.name {
                 nameLabel.text = name
                 
-                let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
+                let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)], context: nil)
                 
                 if rect.height > 20 {
                     categoryLabel.frame = CGRect(x: 0, y: frame.width + 38, width: frame.width, height: 20)
@@ -171,7 +171,7 @@ class AppCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Disney Build It: Frozen"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.numberOfLines = 2
         return label
     }()
@@ -179,7 +179,7 @@ class AppCell: UICollectionViewCell {
     let categoryLabel: UILabel = {
         let label = UILabel()
         label.text = "Entertainment"
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = UIColor.black
         return label
     }()
@@ -187,7 +187,7 @@ class AppCell: UICollectionViewCell {
     let priceLabel: UILabel = {
         let label = UILabel()
         label.text = "$3.99"
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = UIColor.red
         return label
     }()

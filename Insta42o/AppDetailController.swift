@@ -97,7 +97,7 @@ class AppDetailController: UICollectionViewController, UICollectionViewDelegateF
         attributedText.addAttribute(NSParagraphStyleAttributeName, value: style, range: range)
         
         if let desc = app?.desc {
-            attributedText.append(NSAttributedString(string: desc, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 11), NSForegroundColorAttributeName: UIColor.darkGray]))
+            attributedText.append(NSAttributedString(string: desc, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 11), NSForegroundColorAttributeName: UIColor.lightGray]))
         }
         
         return attributedText
@@ -118,7 +118,7 @@ class AppDetailController: UICollectionViewController, UICollectionViewDelegateF
             return CGSize(width: view.frame.width, height: rect.height + 30)
         }
         
-        return CGSize(width: view.frame.width, height: 180)
+        return CGSize(width: view.frame.width, height: 170)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -128,7 +128,7 @@ class AppDetailController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 180)
+        return CGSize(width: view.frame.width, height: 170)
     }
 }
 
