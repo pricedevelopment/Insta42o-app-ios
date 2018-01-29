@@ -39,7 +39,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         let label = UILabel()
         label.text = "Best New Apps"
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = UIColor.red
+        label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,7 +49,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.lightGray
+        collectionView.backgroundColor = UIColor.clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
@@ -57,13 +57,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     let dividerLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+        view.backgroundColor = UIColor(white: 0.6, alpha: 0.6)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     func setupViews() {
-        backgroundColor = UIColor.black
+        backgroundColor = UIColor.clear
         
         addSubview(appsCollectionView)
         addSubview(dividerLineView)
@@ -80,7 +80,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(28)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView, "nameLabel": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(30)][v0][v1(0.9)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView, "nameLabel": nameLabel]))
         
     }
     
@@ -98,7 +98,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 105, height: frame.height - 32)
+        return CGSize(width: 100, height: frame.height - 32)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -121,7 +121,7 @@ class AppCell: UICollectionViewCell {
             if let name = app?.name {
                 nameLabel.text = name
                 
-                let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)], context: nil)
+                let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 15)], context: nil)
                 
                 if rect.height > 20 {
                     categoryLabel.frame = CGRect(x: 0, y: frame.width + 38, width: frame.width, height: 20)
@@ -180,7 +180,7 @@ class AppCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Entertainment"
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = UIColor.black
+        label.textColor = UIColor.blue
         return label
     }()
     
