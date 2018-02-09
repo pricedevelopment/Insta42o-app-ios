@@ -38,8 +38,8 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Best New Apps"
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = UIColor.black
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.textColor = UIColor.green
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,7 +49,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.clear
+        collectionView.backgroundColor = UIColor.black
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
@@ -57,13 +57,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     let dividerLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+        view.backgroundColor = UIColor(white: 0.4, alpha: 0.4)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     func setupViews() {
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.black
         
         addSubview(appsCollectionView)
         addSubview(dividerLineView)
@@ -80,7 +80,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(28)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView, "nameLabel": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(30)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView, "nameLabel": nameLabel]))
         
     }
     
@@ -98,7 +98,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 110, height: frame.height - 32)
+        return CGSize(width: 100, height: frame.height - 32)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -172,6 +172,7 @@ class AppCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Disney Build It: Frozen"
         label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = UIColor.white
         label.numberOfLines = 2
         return label
     }()
@@ -179,7 +180,7 @@ class AppCell: UICollectionViewCell {
     let categoryLabel: UILabel = {
         let label = UILabel()
         label.text = "Entertainment"
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor.blue
         return label
     }()
@@ -187,7 +188,7 @@ class AppCell: UICollectionViewCell {
     let priceLabel: UILabel = {
         let label = UILabel()
         label.text = "$3.99"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = UIColor.red
         return label
     }()

@@ -29,7 +29,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
             self.collectionView?.reloadData()
         }
         
-        collectionView?.backgroundColor = UIColor.white
+        collectionView?.backgroundColor = UIColor.green
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(LargeCategoryCell.self, forCellWithReuseIdentifier: largeCellId)
         
@@ -72,7 +72,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
             return CGSize(width: view.frame.width, height: 160)
         }
         
-        return CGSize(width: view.frame.width, height: 215)
+        return CGSize(width: view.frame.width, height: 220)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
